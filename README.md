@@ -1,10 +1,12 @@
 > **Release mirror.** This repository is a read-only snapshot of
-> `@overturo/verify` 0.4.0, published from Overturo's main
+> `@overturo/verify` 0.4.1, published from Overturo's main
 > development repository. Issues and pull requests are welcome here; accepted
 > changes are ported upstream and appear in the next release snapshot.
 > Security reports: see [SECURITY.md](./SECURITY.md).
 
 # @overturo/verify
+
+**Documentation:** <https://overturo.com/developers/agent-authorization> · **API reference:** <https://overturo.com/developers/openapi>
 
 Standalone Overturo receipt-verification library. Zero runtime dependencies; Apache-2.0.
 
