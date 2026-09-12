@@ -1,0 +1,56 @@
+{
+  "name": "@overturo/verify",
+  "version": "0.4.0",
+  "description": "Standalone Overturo receipt verification library",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^4.1.8"
+  },
+  "keywords": [
+    "overturo",
+    "receipt",
+    "verification",
+    "jwt",
+    "ed25519",
+    "caep",
+    "oversight"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/overturo/verify.git"
+  },
+  "homepage": "https://github.com/overturo/verify#readme",
+  "bugs": {
+    "url": "https://github.com/overturo/verify/issues"
+  },
+  "overrides": {
+    "esbuild": "^0.28.1"
+  }
+}
