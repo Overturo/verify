@@ -1,5 +1,5 @@
 > **Release mirror.** This repository is a read-only snapshot of
-> `@overturo/verify` 0.4.1, published from Overturo's main
+> `@overturo/verify` 0.4.2, published from Overturo's main
 > development repository. Issues and pull requests are welcome here; accepted
 > changes are ported upstream and appear in the next release snapshot.
 > Security reports: see [SECURITY.md](./SECURITY.md).

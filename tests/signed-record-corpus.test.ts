@@ -93,6 +93,25 @@ describe("signed-record corpus", () => {
     })
   }
 
+  // The server may serve the same record HTML-escaped (`\u003c`, `\u2028`) or
+  // raw, depending on its JSON renderer. The signed bytes are overturo-jcs-1 (raw characters)
+  // either way, so the raw-text verifier must decode whatever escaping the
+  // transport applied. Both forms of the escaped-text fixture must verify.
+  test("verifies the escaped-text record in both transport forms", async () => {
+    const raw = readFixtureRaw("consent_record_escaped_text.json")
+    const escaped = raw
+      .replace(/</g, "\\u003c")
+      .replace(/>/g, "\\u003e")
+      .replace(/&/g, "\\u0026")
+      .replace(/\u2028/g, "\\u2028")
+      .replace(/\u2029/g, "\\u2029")
+    expect(escaped).not.toBe(raw)
+    for (const text of [raw, escaped]) {
+      const verified = await verifyRecord(text, { publishedKeys: manifest.published_keys })
+      expect(verified.recordType).toBe("consent_record")
+    }
+  })
+
   test("a tampered fixture also fails in embedded-only mode (bytes, not key resolution)", async () => {
     await expect(
       verifyRecord(readFixtureRaw("tampered_receipt.json"), { allowEmbeddedKey: true })

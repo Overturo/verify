@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.4.2] - 2026-10-09
+### Added
+- The vendored signed-record corpus gains `consent_record_escaped_text` — receipt text containing `<`, `>`, `&` and U+2028 — and the corpus test proves the record verifies in both transport forms: served raw and served HTML-escaped (`\u003c`, `\u2028`). The raw-text verifier decodes whatever escaping the transport applied; the signed bytes are the canonical form either way.
+### Changed
+- Vendored signed-record fixtures regenerated (record identifiers and the `overturo-cr/2.9` schema label); published keys unchanged.
+
 ## [0.4.1] - 2026-09-12
 
 ### Changed
