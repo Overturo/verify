@@ -1,6 +1,6 @@
 {
   "name": "@overturo/verify",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Standalone Overturo receipt verification library",
   "license": "Apache-2.0",
   "type": "module",
@@ -31,7 +31,7 @@
   "devDependencies": {
     "tsup": "^8.0.0",
     "typescript": "^5.4.0",
-    "vitest": "^4.1.8"
+    "vitest": "^4.1.11"
   },
   "keywords": [
     "overturo",
