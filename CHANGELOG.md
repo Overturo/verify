@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.4.4] - 2026-10-26
+### Changed
+- The public repository now carries its own release workflow and publishes to npm with a trusted publisher. No code change.
+
 ## [0.4.3] - 2026-10-15
 ### Changed
 - Vendored signed-record fixtures regenerated (record identifiers and the `overturo-cr/2.12` schema label); published keys unchanged. Dev dependency: vitest 4.1.11. Tests only — the published package is unchanged.
